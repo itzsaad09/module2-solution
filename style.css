@@ -1,175 +1,143 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+}
+body {
+  background-color: #9e8851;
+}
+h1 {
+  margin: 100px;
+  text-align: center;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 175%;
+}
+section {
+  position: relative;
+  padding: 15px;
+  width: 100%;
+}
+p {
+  position: relative;
+  clear: right;
+}
+div {
+  position: relative;
+  background-color: #bf7f3f;
+  border: 1px solid black;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+}
+.sub {
+  float: right;
+  width: 100px;
+  padding: 5px;
+  margin: 0px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 125%;
+  font-weight: bold;
+  background-color: #b0d619;
+}
+.content {
+  padding: 5px;
+  border: none;
+  background-color: #bf7f3f;
+  font-family: Helvetica;
+  color: black;
+  margin: 0px;
+  height: 200px;
+  overflow: auto;
 }
 
 .row {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-areas: 
-    "header header header header" 
-    "sidebar main main main" 
-    "sidebar box1 box2 box3" 
-    "sidebar footer footer footer";
+  width: 90%;
 }
 
-.header {
-  grid-area: header;
-  background-color: #00ffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 1rem;
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #9e8851;
+}
+h1 {
+  margin: 100px;
+  text-align: center;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 175%;
+}
+section {
   position: relative;
+  padding: 15px;
+  width: 100%;
 }
-
-.logo {
-  display: flex;
+p {
+  position: relative;
+  clear: right;
 }
-
-.logo img {
-  height: 120px;
-  width: auto;
+div {
+  position: relative;
+  background-color: #bf7f3f;
+  border: 1px solid black;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
 }
-
-.title {
-  color: white;
+.sub {
+  float: right;
+  width: 100px;
+  padding: 5px;
+  margin: 0px;
+  border: 1px solid black;
+  text-align: center;
+  font-size: 125%;
+  font-weight: bold;
+  background-color: #b0d619;
 }
-
-nav {
-  display: flex;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  background-color: #deb887;
-  padding:1rem;
-  margin: 0;
-}
-
-nav ul li {
-  margin-left: 1.5rem;
-}
-
-nav ul li a {
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-nav ul li a:hover {
-  color: #3498db;
-}
-
-.hamburger {
-  display: none;
-  cursor: pointer;
-  font-size: 1.5rem;
-  color: blue;
-  background: none;
+.content {
+  padding: 5px;
   border: none;
-  padding: 0.5rem;
+  background-color: #bf7f3f;
+  font-family: Helvetica;
+  color: black;
+  margin: 0px;
+  height: 200px;
+  overflow: auto;
 }
 
-.sidebar {
-  grid-area: sidebar;
-  background-color: #8a2be2;
-  color: white;
-  text-align: center;
+.row {
+  width: 90%;
 }
 
-.main {
-  grid-area: main;
-  background-color: #5f9ea0;
-  color: white;
-  text-align: center;
-}
-
-.box1 {
-  grid-area: box1;
-  background-color: #ff7f50;
-  color: white;
-  text-align: center;
-}
-
-.box2 {
-  grid-area: box2;
-  background-color: #6495ed;
-  color: white;
-  text-align: center;
-}
-
-.box3 {
-  grid-area: box3;
-  background-color: #a52a2a;
-  color: white;
-  text-align: center;
-}
-
-.footer {
-  grid-area: footer;
-  background-color: #008b8b;
-  color: white;
-  text-align: center;
-}
-
-@media only screen and (max-width: 640px) {
-  .row {
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-      "header" 
-      "sidebar" 
-      "main" 
-      "box1" 
-      "box2" 
-      "box3" 
-      "footer";
+/*desktop version*/
+@media (min-width: 992px) {
+  .column-lg-4 {
+    float: left;
+    width: 33.33%;
   }
-
-  .header {
-    padding: 1rem;
-    /* margin-bottom: 200px; */
+}
+/*tablet version*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .colmn-md-6 {
+    float: left;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
   }
-
-  .hamburger {
-    display: block;
-  }
-
-  nav {
+  .colmn-md-12 {
+    float: left;
     width: 100%;
-    display: none;
+    margin-left: auto;
+    margin-right: auto;
   }
-
-  nav.active {
-    display: block;
-    position: absolute;
-    top: 100%;
-    left: 0;
-  }
-
-  nav ul {
-    flex-direction: column;
-    padding: 0;
+}
+/*mobile version*/
+@media (max-width: 767px) {
+  .colmn-sm-12 {
+    float: left;
     width: 100%;
-  }
-
-  nav ul li {
-    margin: 0;
-    padding: 1rem;
-    text-align: center;
-  }
-
-  .sidebar {
-    padding: 5rem;
-  }
-
-  .main {
-    padding: 3rem;
-  }
-
-  .box1 {
-    padding: 1rem;
   }
 }
